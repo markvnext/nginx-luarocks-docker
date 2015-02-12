@@ -2,6 +2,7 @@ FROM phusion/baseimage
 
 # Install Nginx.
 RUN \
+  add-apt-repository ppa:nginx/development && \
   apt-get update && \
   apt-get install -y build-essential curl git unzip libreadline-dev libncurses5-dev libpcre3-dev libssl-dev luajit lua5.1 liblua5.1-0-dev nano perl wget nginx-extras && \
   rm -rf /var/lib/apt/lists/*
